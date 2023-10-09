@@ -17,7 +17,7 @@ def crop_bottom_half(input_image_path, output_image_path):
     cropped_image.save(output_image_path)
 
 if __name__ == "__main__":
-    input_image_path = "input.tif"  # Replace with the path to your input TIFF image
-    output_image_path = "output.tif"  # Replace with the desired output path
+    input_image_path = "TestImage.jpg"  # Replace with the path to your input TIFF image
+    output_image_path = "output.jpg"  # Replace with the desired output path
 
     crop_bottom_half(input_image_path, output_image_path)
