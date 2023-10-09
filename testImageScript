@@ -1,0 +1,23 @@
+from PIL import Image
+
+def crop_bottom_half(input_image_path, output_image_path):
+    # Open the input image
+    image = Image.open(input_image_path)
+
+    # Get the width and height of the image
+    width, height = image.size
+
+    # Calculate the coordinates for cropping (left, upper, right, lower)
+    crop_coords = (0, height // 2, width, height)
+
+    # Crop the image
+    cropped_image = image.crop(crop_coords)
+
+    # Save the cropped image
+    cropped_image.save(output_image_path)
+
+if __name__ == "__main__":
+    input_image_path = "input.tif"  # Replace with the path to your input TIFF image
+    output_image_path = "output.tif"  # Replace with the desired output path
+
+    crop_bottom_half(input_image_path, output_image_path)
